@@ -1,6 +1,5 @@
 import "./styles.css"
 import { useState } from "react"
-import { TodoList } from "./todoList";
 import { TodoForm } from "./todoForm";
 import { TodoList } from "./todoList";
 function App() {
@@ -34,7 +33,7 @@ function App() {
     <>
     <TodoForm onSubmit={addTodo} />
     <h1 className="header">Todo List</h1>
-    <TodoList todos={todos} />
+    <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
   </>)
 }
 
